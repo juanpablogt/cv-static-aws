@@ -470,17 +470,17 @@ h3 {
 ------------------------------- */
 @media (min-width: 769px) and (max-width: 1024px) {
   .resume {
-    width: 90%;
+    width: 90% !important;
     flex-direction: row;
   }
 
   .resume .base {
-    width: 35%;
+    width: 35% !important;
     padding: 20px;
   }
 
   .resume .func {
-    width: 65%;
+    width: 65% !important;
     padding: 20px;
   }
 

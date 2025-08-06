@@ -465,32 +465,3 @@ h3 {
     width: 100%;
   }
 }
-/* ------------------------------
-   RESPONSIVE DESIGN: Tablets
-------------------------------- */
-@media (min-width: 769px) and (max-width: 1024px) {
-  .resume {
-    width: 90% !important;
-    flex-direction: row;
-  }
-
-  .resume .base {
-    width: 35% !important;
-    padding: 20px;
-  }
-
-  .resume .func {
-    width: 65% !important;
-    padding: 20px;
-  }
-
-  .resume .func .skills-soft ul {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-
-  .resume .func .interests-items {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-}

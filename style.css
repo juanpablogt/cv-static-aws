@@ -410,3 +410,87 @@ h3 {
 .resume .func .interests-items div span {
   display: block;
 }
+
+/* ---------------------------
+   RESPONSIVE DESIGN: < 768px
+---------------------------- */
+@media (max-width: 768px) {
+  .resume {
+    flex-direction: column;
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .resume .base,
+  .resume .func {
+    width: 100%;
+    float: none;
+    padding: 20px 15px;
+  }
+
+  .resume .func .work,
+  .resume .func .edu {
+    width: 100%;
+    float: none;
+  }
+
+  .resume .func .skills-soft ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .resume .func .interests-items {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .resume .func .interests-items div {
+    width: 60px;
+    height: auto;
+  }
+
+  .resume .func .skills-prog ul li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .resume .func .skills-prog ul li span {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+
+  .resume .func .skills-prog ul li .skills-bar {
+    width: 100%;
+  }
+}
+/* ------------------------------
+   RESPONSIVE DESIGN: Tablets
+------------------------------- */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .resume {
+    width: 90%;
+    flex-direction: row;
+  }
+
+  .resume .base {
+    width: 35%;
+    padding: 20px;
+  }
+
+  .resume .func {
+    width: 65%;
+    padding: 20px;
+  }
+
+  .resume .func .skills-soft ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  .resume .func .interests-items {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}

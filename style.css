@@ -60,6 +60,7 @@ h3 {
 .resume .func {
   box-sizing: border-box;
   float: left;
+  min-width: 0;
 }
 .resume .base > div,
 .resume .func > div {
@@ -108,6 +109,9 @@ h3 {
 }
 .resume .base .contact div {
   line-height: 24px;
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
 }
 .resume .base .contact div a:hover {
   color: #e07a5f;
@@ -120,6 +124,7 @@ h3 {
 }
 .resume .base .contact div i {
   color: #26345c;
+  flex: 0 0 20px;
   width: 20px;
   height: 20px;
   font-size: 20px;
@@ -129,6 +134,14 @@ h3 {
 }
 .resume .base .contact div span {
   position: relative;
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.resume .base .contact div a {
+  min-width: 0;
+  display: flex;
+  align-items: flex-start;
 }
 .resume .base .contact div span::after {
   content: '';
@@ -174,6 +187,59 @@ h3 {
 .resume .base .follow .box i.fa::before {
   display: block;
 }
+.resume .base .sidebar-section h3 {
+  color: #67e8f9;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+.resume .base .sidebar-section h3 i {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 50%;
+  background: #26345c;
+  color: #f8fafc;
+  font-size: 14px;
+  text-align: center;
+}
+.resume .base .sidebar-section ul {
+  margin: 0;
+  line-height: 1.6;
+}
+.resume .base .sidebar-section li {
+  color: #cbd5e1;
+  font-size: 13px;
+  overflow-wrap: anywhere;
+}
+.resume .base .sidebar-section {
+  padding-bottom: 6px;
+}
+.resume .base .sidebar-section .interests-items {
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  text-align: center;
+}
+.resume .base .sidebar-section .interests-items div {
+  min-width: 0;
+  height: auto;
+}
+.resume .base .sidebar-section .interests-items div i {
+  color: #67e8f9;
+  font-size: 24px;
+}
+.resume .base .sidebar-section .interests-items div span {
+  display: block;
+  color: #cbd5e1;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
 .resume .func {
   width: 645px;
   padding: 30px 25px;
@@ -209,7 +275,8 @@ h3 {
 }
 .resume .func .work,
 .resume .func .edu {
-  float: left;
+  float: none;
+  width: 100%;
 }
 .resume .func .work small,
 .resume .func .edu small {
@@ -282,12 +349,11 @@ h3 {
 .resume .func .work ul li span,
 .resume .func .edu ul li span {
   transition-duration: 0.3s;
+  overflow-wrap: anywhere;
 }
-.resume .func .work {
-  width: 42%;
-}
-.resume .func .edu {
-  width: 58%;
+.resume .func .work ul li p {
+  margin: 8px 0 0;
+  overflow-wrap: anywhere;
 }
 .resume .func .skills-prog {
   clear: both;
@@ -310,12 +376,16 @@ h3 {
 }
 .resume .func .skills-prog ul li span {
   display: block;
-  width: 120px;
+  flex: 0 0 190px;
+  width: 190px;
+  overflow-wrap: anywhere;
 }
 .resume .func .skills-prog ul li .skills-bar {
   background: #cdcdcd;
   height: 2px;
-  width: calc(100% - 120px);
+  width: auto;
+  flex: 1 1 auto;
+  min-width: 0;
   position: relative;
   border-radius: 2px;
 }
@@ -376,11 +446,20 @@ h3 {
   text-align: center;
   display: flex;
   justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 .resume .func .interests-items div {
   display: inline-block;
-  width: 80px;
+  flex: 1 1 120px;
+  width: auto;
   height: 80px;
+}
+
+.resume .func .languages ul,
+.resume .func .certifications ul {
+  margin: 0 0 0 15px;
+  line-height: 1.7;
 }
 .resume .func .interests-items div:hover i {
   transform: scale(1.2);
@@ -457,6 +536,7 @@ h3 {
   }
 
   .resume .func .skills-prog ul li span {
+    flex: 0 1 auto;
     width: 100%;
     margin-bottom: 4px;
   }
